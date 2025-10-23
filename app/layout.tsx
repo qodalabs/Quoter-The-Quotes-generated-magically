@@ -33,10 +33,10 @@ export default function RootLayout({
             <NavBar />
           </div>
         </header>
-        <main className="relative z-10 mx-auto max-w-6xl px-2 sm:px-4 pt-4 pb-6">{children}</main>
-        <footer className="relative z-10 mt-6">
-          <div className="h-px w-full bg-gradient-to-r from-emerald-500/40 via-emerald-300/20 to-emerald-500/40" />
-          <div className="px-4 py-3 text-center text-[11px] text-gray-400">
+        <main className="relative z-10 mx-auto max-w-6xl px-2 sm:px-4 pt-4 pb-2">{children}</main>
+        <footer className="relative z-10 mt-2">
+          <div className="h-px w-full bg-gradient-to-r from-emerald-500/30 via-emerald-300/15 to-emerald-500/30" />
+          <div className="px-2 py-1 leading-none text-center text-[10px] text-gray-400">
             Built with Next.js, Supabase, and Gemini
           </div>
         </footer>
