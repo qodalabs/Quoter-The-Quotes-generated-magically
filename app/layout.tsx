@@ -34,8 +34,11 @@ export default function RootLayout({
           </div>
         </header>
         <main className="relative z-10 mx-auto max-w-6xl px-2 sm:px-4 pt-4 pb-6">{children}</main>
-        <footer className="relative z-10 mt-6 border-t border-gray-800 py-4 text-center text-xs text-gray-400">
-          Built with Next.js, Supabase, and Gemini
+        <footer className="relative z-10 mt-8">
+          <div className="h-px w-full bg-gradient-to-r from-emerald-500/40 via-emerald-300/20 to-emerald-500/40" />
+          <div className="px-4 py-4 text-center text-[11px] text-gray-400">
+            Built with Next.js, Supabase, and Gemini
+          </div>
         </footer>
       </body>
     </html>

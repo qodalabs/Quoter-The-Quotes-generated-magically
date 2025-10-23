@@ -43,23 +43,37 @@ export default function LoginClient() {
     <div className="mx-auto max-w-md px-4">
       <div className="rounded-xl bg-black p-6 ambient glow">
         <div className="h-1 w-full rounded bg-gradient-to-r from-emerald-500/60 via-emerald-400 to-emerald-600/60 mb-4" />
-        <div className="mb-3 flex items-center justify-between">
-          <h1 className="text-xl font-semibold text-emerald-400">
+        <div className="mb-4">
+          <h1 className="mb-2 text-xl font-semibold text-emerald-400">
             {mode === "signup" ? "Create your account" : "Welcome back"}
           </h1>
-          <div className="inline-flex rounded-lg border border-emerald-500/30 p-0.5 bg-black">
-            <button
-              onClick={() => setMode("signin")}
-              className={`px-3 py-1 text-sm rounded-md ${mode === "signin" ? "bg-emerald-500 text-gray-900" : "text-emerald-400 hover:bg-emerald-500/10"}`}
-            >
-              Sign in
-            </button>
-            <button
-              onClick={() => setMode("signup")}
-              className={`px-3 py-1 text-sm rounded-md ${mode === "signup" ? "bg-emerald-500 text-gray-900" : "text-emerald-400 hover:bg-emerald-500/10"}`}
-            >
-              Sign up
-            </button>
+          {/* Sliding segmented control */}
+          <div className="relative overflow-hidden rounded-lg border border-emerald-500/30 bg-black">
+            <span
+              className={`pointer-events-none absolute inset-y-0 left-0 w-1/2 rounded-md bg-emerald-500/90 transition-transform duration-300 ease-out ${
+                mode === "signup" ? "translate-x-full" : "translate-x-0"
+              }`}
+            />
+            <div className="grid grid-cols-2 text-sm font-medium">
+              <button
+                type="button"
+                onClick={() => setMode("signin")}
+                className={`relative z-[1] px-3 py-2 transition-colors ${
+                  mode === "signin" ? "text-gray-900" : "text-emerald-400 hover:bg-emerald-500/10"
+                }`}
+              >
+                Sign in
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("signup")}
+                className={`relative z-[1] px-3 py-2 transition-colors ${
+                  mode === "signup" ? "text-gray-900" : "text-emerald-400 hover:bg-emerald-500/10"
+                }`}
+              >
+                Sign up
+              </button>
+            </div>
           </div>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
