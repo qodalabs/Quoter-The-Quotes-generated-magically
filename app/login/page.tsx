@@ -6,7 +6,7 @@ import { createClient } from "../../lib/supabase/client";
 
 // Avoid static generation on Vercel; this page relies on runtime env and client auth
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// revalidate disabled for dynamic page
 
 export default function LoginPage() {
   const router = useRouter();
@@ -109,3 +109,4 @@ export default function LoginPage() {
     </div>
   );
 }
+
