@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 7: Robot -->
+  <rect width="128" height="128" rx="24" fill="#000"/>
+  <g transform="translate(20 18)">
+    <rect x="0" y="22" width="88" height="72" rx="12" fill="#031b16"/>
+    <rect x="18" y="34" width="52" height="44" rx="8" fill="#10b981"/>
+    <circle cx="36" cy="54" r="6" fill="#00110c"/>
+    <circle cx="52" cy="54" r="6" fill="#00110c"/>
+    <rect x="34" y="66" width="20" height="6" rx="3" fill="#00110c"/>
+    <rect x="40" y="6" width="8" height="14" rx="3" fill="#10b981"/>
+    <circle cx="44" cy="4" r="4" fill="#10b981"/>
+  </g>
+</svg>

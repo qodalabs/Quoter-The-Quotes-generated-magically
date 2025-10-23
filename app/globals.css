@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Simple spinner */
+.spinner {
+  border: 3px solid rgba(255,255,255,0.2);
+  border-top: 3px solid rgb(16 185 129); /* emerald-500 */
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Subtle pop animation for icon feedback */
+.pop {
+  animation: pop 220ms ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+/* Handwritten script-like font stack for the Quoter placeholder */
+.font-quote {
+  font-family: var(--font-script), "Dancing Script", "Pacifico", cursive;
+}
+
+/* Emerald flowing text shimmer for loading state */
+.shimmer-emerald {
+  background: linear-gradient(90deg, rgba(16,185,129,0.2) 0%, rgba(16,185,129,1) 50%, rgba(16,185,129,0.2) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Ambient shadows */
+.ambient {
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.50),
+    0 0 24px rgba(16, 185, 129, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.03) inset;
+}
+
+.ambient-soft {
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.40),
+    0 0 16px rgba(16, 185, 129, 0.08);
+}
+
+/* Soft emerald glow */
+.glow {
+  position: relative;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45),               /* base elevation */
+    0 12px 40px rgba(16,185,129,.10);          /* soft emerald aura */
+}
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 80% at 0% 0%, rgba(16,185,129,.18), transparent 60%),
+    radial-gradient(120% 80% at 100% 100%, rgba(16,185,129,.14), transparent 60%);
+  filter: blur(8px);
+  z-index: 0;
+}
+.glow-hover:hover { box-shadow: 0 12px 44px rgba(16,185,129,.18), 0 10px 28px rgba(0,0,0,.35); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* Section title styling */
+.section-title { @apply text-emerald-400 font-semibold tracking-wide uppercase text-xs; }
+.section-heading { @apply text-emerald-400 italic text-2xl sm:text-3xl; font-family: var(--font-script, ui-serif), cursive; text-shadow: 0 0 10px rgba(16,185,129,.25); }
+.section-bar { height: 1px; background: linear-gradient(90deg, rgba(16,185,129,.5), rgba(16,185,129,.08)); }
+
+/* Optional: script heading utility for card titles */
+.script-heading { color: rgb(16 185 129); font-style: italic; font-family: var(--font-script, ui-serif), cursive; text-shadow: 0 0 8px rgba(16,185,129,.22); }
+
+/* Themed cursors (emerald + black) */
+html, body {
+  cursor: url('/cursors/cursor-default.svg') 4 4, auto;
+}
+
+a, button, [role="button"], .clickable {
+  cursor: url('/cursors/cursor-pointer.svg') 4 2, pointer;
+}
+
+/* Keep I-beam for text inputs */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  cursor: text;
+}
+
+/* HomeLoader animations */
+.draw-letter {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.draw-1 { animation: draw 0.8s ease forwards 0s; }
+.draw-2 { animation: draw 0.8s ease forwards 0.8s; }
+.draw-3 { animation: draw 0.8s ease forwards 1.6s; }
+.draw-4 { animation: draw 0.8s ease forwards 2.4s; }
+.draw-5 { animation: draw 0.8s ease forwards 3.2s; }
+.draw-6 { animation: draw 0.8s ease forwards 4.0s; }
+
+@keyframes zoomFade {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+.animate-zoom-fade { animation: zoomFade 0.6s ease forwards; animation-delay: 4.9s; }
+
+/* Simple fade/slide up animation for quotes */
+.fade-up {
+  animation: fadeUp 450ms ease-out both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

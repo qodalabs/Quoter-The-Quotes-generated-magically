@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 8: Poop icon (stylized, friendly) -->
+  <rect width="128" height="128" rx="24" fill="#000"/>
+  <g transform="translate(20 20)">
+    <path d="M40 6c-2 6 2 10 8 12-8 2-12 8-10 14-10 2-16 10-16 18 0 10 12 18 28 18s28-8 28-18c0-8-6-16-16-18 2-4 2-8-2-10-4-4-12-4-20-16Z" fill="#10b981"/>
+    <g fill="#00110c">
+      <circle cx="44" cy="58" r="5"/>
+      <circle cx="60" cy="58" r="5"/>
+      <path d="M44 68c8 4 12 4 20 0" stroke="#00110c" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 1: Skull -->
+  <rect width="128" height="128" rx="24" fill="#000"/>
+  <g transform="translate(16 18)">
+    <rect x="0" y="0" width="96" height="96" rx="20" fill="#02150f"/>
+    <g transform="translate(8 6)">
+      <path d="M32 4h16c18 0 32 14 32 32v6c0 12-10 22-22 22H54v10a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6V64H22C10 64 0 54 0 42v-6C0 18 14 4 32 4Z" fill="#10b981"/>
+      <circle cx="26" cy="32" r="8" fill="#00110c"/>
+      <circle cx="58" cy="32" r="8" fill="#00110c"/>
+      <rect x="36" y="48" width="12" height="8" rx="2" fill="#00110c"/>
+    </g>
+  </g>
+</svg>

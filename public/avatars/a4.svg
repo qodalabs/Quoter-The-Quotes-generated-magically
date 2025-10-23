@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 4: Cute Ghost -->
+  <rect width="128" height="128" rx="24" fill="#000"/>
+  <g transform="translate(24 18)">
+    <path d="M40 6c18 0 32 14 32 32v34c0 4-4 6-7 4l-5-3-5 3-6-3-6 3-6-3-6 3-5-3-5 3c-3 2-7 0-7-4V38C14 20 22 6 40 6Z" fill="#10b981"/>
+    <g fill="#00110c">
+      <circle cx="32" cy="38" r="6"/>
+      <circle cx="48" cy="38" r="6"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- 3: Dog -->
+  <rect width="128" height="128" rx="24" fill="#000"/>
+  <g transform="translate(16 18)">
+    <rect x="0" y="0" width="96" height="96" rx="20" fill="#041b16"/>
+    <circle cx="52" cy="56" r="28" fill="#10b981"/>
+    <circle cx="72" cy="44" r="10" fill="#10b981"/>
+    <g fill="#00110c">
+      <circle cx="44" cy="54" r="5"/>
+      <circle cx="60" cy="54" r="5"/>
+      <circle cx="52" cy="66" r="4"/>
+    </g>
+    <path d="M36 76c10 6 20 6 32 0" stroke="#00110c" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
