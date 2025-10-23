@@ -45,7 +45,9 @@ export default function LoginClient() {
         <div className="h-1 w-full rounded bg-gradient-to-r from-emerald-500/60 via-emerald-400 to-emerald-600/60 mb-4" />
         <div className="mb-4">
           <h1 className="mb-2 text-xl font-semibold text-emerald-400">
-            {mode === "signup" ? "Create your account" : "Welcome back"}
+            <span key={mode} className="swap-in inline-block">
+              {mode === "signup" ? "Create your account" : "Welcome back"}
+            </span>
           </h1>
           {/* Sliding segmented control */}
           <div className="relative overflow-hidden rounded-lg border border-emerald-500/30 bg-black">
@@ -117,7 +119,10 @@ export default function LoginClient() {
             disabled={loading}
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-gray-900 shadow-[0_8px_40px_rgba(16,185,129,0.15)] hover:bg-emerald-400 hover:shadow-[0_10px_48px_rgba(16,185,129,0.25)] disabled:opacity-70"
           >
-            {loading && <span className="spinner" />} {mode === "signup" ? "Sign Up" : "Sign In"}
+            {loading && <span className="spinner" />}
+            <span key={mode} className="swap-in inline-block">
+              {mode === "signup" ? "Sign Up" : "Sign In"}
+            </span>
           </button>
         </form>
         <p className="mt-4 text-center text-xs text-gray-400">
